@@ -2,7 +2,7 @@ logstash:
     image: logstash
     container_name: logstash
     volumes: 
-        -  ~/workspace:/config-dir
+        -  $PWD:/config-dir
     links: 
         - elasticsearch
     command: logstash -f /config-dir/logstash.conf
